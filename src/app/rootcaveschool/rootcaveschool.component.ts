@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rootcaveschool',
-  templateUrl: './rootcaveschool.component.html',
+  template: `
+  <app-rootcave></app-rootcave>
+  <app-rootcave></app-rootcave>`,
   styleUrls: ['./rootcaveschool.component.css']
 })
 export class RootcaveschoolComponent implements OnInit {
