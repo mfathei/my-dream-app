@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "Hello Root Cave";
   imageUrl = "http://lorempixel.com/400/200/sports/1";
+
+  onClick(){
+    console.log('you clicked button');
+  }
+
+  onClick1($event){
+    console.log('you clicked button '+ $event.target.textContent);
+  }
 }
