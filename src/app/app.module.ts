@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RootcaveComponent } from './rootcave/rootcave.component';
+import { RootcaveschoolComponent } from './rootcaveschool/rootcaveschool.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RootcaveComponent
+    RootcaveComponent,
+    RootcaveschoolComponent
   ],
   imports: [
     BrowserModule,
