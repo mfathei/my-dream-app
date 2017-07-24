@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name : string;
+  title = "Hello Root Cave";
+  imageUrl = "http://lorempixel.com/400/200/sports/1";
 }
