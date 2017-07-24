@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-rootcaveschool',
+  // selector: 'app-rootcaveschool', as an element
+  // selector: '[app-rootcaveschool]', as an attribute
+  selector: '.app-rootcaveschool', // as a class
   template: `
   <app-rootcave></app-rootcave>
   <app-rootcave></app-rootcave>`,
