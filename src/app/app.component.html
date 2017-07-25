@@ -1,14 +1,15 @@
-<h3>
-    {{title}}
-</h3>
-<img src="{{ imageUrl }}" alt="">
-<img [src]="imageUrl" alt="">
-<img bind-src="imageUrl" alt="">
+<p *ngIf='true'>
+    Expression is true
+    This paragraph appears on the DOM 
+</p>
+<p *ngIf='false'>
+    Expression is false
+    This paragraph appears on the DOM 
+</p>
 
-<button (click)="onClick()">Click</button>
-<button on-click="onClick1($event)">Click 1</button>
-
-<input type="text" [value]="title" (input)="title = $event.target.value"><br />
-<input type="text" [(ngModel)]="title">
-<input type="text" bindon-ngModel="title">
-<button (click)="title = ''">Clear</button> Label : {{ title }}
+<p style="display:block">
+    Display is block
+</p>
+<p style="display:none">
+    Display is none
+</p>
