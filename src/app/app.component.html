@@ -1,17 +1,38 @@
-<ul>
-    <li *ngFor="let person of people; let i = index">
-        {{i+1}} - {{person.name}}
+
+<br><br>
+<ul *ngFor="let person of people">
+    <li *ngIf="person.country === 'EGYPT'" class="text-success">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngIf="person.country === 'USA'" class="text-primary">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngIf="person.country === 'UK'" class="text-info">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngIf="person.country === 'GERMANY'" class="text-danger">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngIf="person.country !== 'EGYPT' && person.country !== 'USA' && person.country !== 'UK' && person.country !== 'GERMANY'"
+        class="text-warning">
+        {{person.name}} ({{person.country}})
     </li>
 </ul>
 <br><br>
-
-<ul>
-    <li *ngFor="let group of peopleByCountry">
-        {{ group.country }}
-        <ul>
-            <li *ngFor="let person of group.people; let i = index">
-                {{i+1}} - {{ person.name }}
-            </li>
-        </ul>
+<ul *ngFor="let person of people" [ngSwitch]="person.country">
+    <li *ngSwitchCase="'EGYPT'" class="text-success">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngSwitchCase="'USA'" class="text-primary">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngSwitchCase="'UK'" class="text-info">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngSwitchCase="'GERMANY'" class="text-danger">
+        {{person.name}} ({{person.country}})
+    </li>
+    <li *ngSwitchDefault class="text-warning">
+        {{person.name}} ({{person.country}})
     </li>
 </ul>

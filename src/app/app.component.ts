@@ -12,16 +12,29 @@ export class AppComponent {
 
   people = [
     {
-      "name": "Mahmoud kotoury"
+      "name": "Mahmoud kotoury",
+      "age": 27,
+      "country": "EGYPT"
     },
     {
-      "name": "Yasmine mohamed"
+      "name": "Yasmine mohamed",
+      "age": 34,
+      "country": "GERMANY"
     },
     {
-      "name": "John doe"
+      "name": "John doe",
+      "age": 34,
+      "country": "USA"
     },
     {
-      "name": "Jane doe"
+      "name": "Jane doe",
+      "age": 35,
+      "country": "UK"
+    },
+    {
+      "name": "Ali ahmed",
+      "age": 24,
+      "country": "QATAR"
     }
   ];
 
