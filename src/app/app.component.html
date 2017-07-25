@@ -1,23 +1,19 @@
-
-<br><br>
+<br>
+<br>
 <ul *ngFor="let person of people">
-    <li *ngIf="person.country === 'EGYPT'" class="text-success">
-        {{person.name}} ({{person.country}})
-    </li>
-    <li *ngIf="person.country === 'USA'" class="text-primary">
-        {{person.name}} ({{person.country}})
-    </li>
-    <li *ngIf="person.country === 'UK'" class="text-info">
-        {{person.name}} ({{person.country}})
-    </li>
-    <li *ngIf="person.country === 'GERMANY'" class="text-danger">
-        {{person.name}} ({{person.country}})
-    </li>
-    <li *ngIf="person.country !== 'EGYPT' && person.country !== 'USA' && person.country !== 'UK' && person.country !== 'GERMANY'"
-        class="text-warning">
+    <li [ngStyle]="{'color': getColor(person.country)}">
         {{person.name}} ({{person.country}})
     </li>
 </ul>
+<br>
+<br>
+<ul *ngFor="let person of people">
+    <!-- note .px as a unit -->
+    <li [style.color]="getColor(person.country)" [style.font-size.px]="24">
+        {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
 <br><br>
 <ul *ngFor="let person of people" [ngSwitch]="person.country">
     <li *ngSwitchCase="'EGYPT'" class="text-success">

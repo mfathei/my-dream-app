@@ -63,6 +63,22 @@ export class AppComponent {
     }
   ];
 
+  getColor(country) {
+    switch (country) {
+      case 'EGYPT':
+        return "green";
+      case 'USA':
+        return "blue";
+      case 'UK':
+        return "brown";
+      case 'GERMANY':
+        return "red";
+      default:
+        return "yellow";
+    }
+  }
+
+
   onClick() {
     console.log('you clicked button');
   }
