@@ -1,15 +1,17 @@
-<p *ngIf='true'>
-    Expression is true
-    This paragraph appears on the DOM 
-</p>
-<p *ngIf='false'>
-    Expression is false
-    This paragraph appears on the DOM 
-</p>
+<ul>
+    <li *ngFor="let person of people; let i = index">
+        {{i+1}} - {{person.name}}
+    </li>
+</ul>
+<br><br>
 
-<p style="display:block">
-    Display is block
-</p>
-<p style="display:none">
-    Display is none
-</p>
+<ul>
+    <li *ngFor="let group of peopleByCountry">
+        {{ group.country }}
+        <ul>
+            <li *ngFor="let person of group.people; let i = index">
+                {{i+1}} - {{ person.name }}
+            </li>
+        </ul>
+    </li>
+</ul>
