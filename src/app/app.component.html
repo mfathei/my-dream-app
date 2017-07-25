@@ -1,3 +1,10 @@
-<div>
-    Hello Root Cave won't render the binded value name <pre ngNonBindable>{{ name }}</pre>
-</div>
+<h3>
+    Hello Root Cave
+</h3>
+
+<div myRootCave>This is my custom directive</div> 
+
+<p myRootCave [highlightColor]="'Green'">This is my custom directive green</p>
+<p myRootCave [highlightColor]="'Orange'">This is my custom directive orange</p>
+
+ <!-- <p [myRootCave] = "color">This is my custom directive yellow</p>  -->

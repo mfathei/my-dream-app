@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "Hello Root Cave";
   imageUrl = "http://lorempixel.com/400/200/sports/1";
-
+  color: string = 'yellow';
 
   people = [
     {
